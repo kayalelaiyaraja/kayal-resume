@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Digital Resume</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f7;
+            color: #333;
+            line-height: 1.6;
+            padding: 25px 12px;
+        }
+
+        .resume {
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 18px #00000018;
+        }
+
+        header {
+            background: #15345b;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #d8e7ff;
+        }
+
+        .contact {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        main {
+            padding: 30px;
+        }
+
+        section {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            color: #15345b;
+            border-bottom: 2px solid #2d80c3;
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+        }
+
+        ul {
+            padding-left: 22px;
+        }
+
+        .project {
+            background: #f3f7fc;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .project h3 {
+            color: #245d91;
+        }
+
+        footer {
+            text-align: center;
+            background: #15345b;
+            color: white;
+            padding: 15px;
+        }
+
+        .print-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            background: #2478b9;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .resume {
+                box-shadow: none;
+            }
+
+            .print-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="resume">
+
+        <header>
+            <h1>Your Name</h1>
+            <p>First-Year Information Technology Student</p>
+
+            <div class="contact">
+                <p>Email: yourname@email.com</p>
+                <p>Phone: +91 XXXXXXXXXX</p>
+                <p>Location: Tamil Nadu, India</p>
+                <p>LinkedIn: Add your LinkedIn profile URL</p>
+            </div>
+        </header>
+
+        <main>
+
+            <section>
+                <h2>Career Objective</h2>
+                <p>
+                    Motivated first-year IT student interested in
+                    software development and emerging technologies.
+                    Eager to learn programming, develop technical
+                    skills, and build practical projects to become
+                    a skilled software engineer.
+                </p>
+            </section>
+
+            <section>
+                <h2>Education</h2>
+                <h3>Bachelor of Technology / Engineering in IT</h3>
+                <p>Nehru Institute of Technology</p>
+                <p>Currently pursuing First Year</p>
+            </section>
+
+            <section>
+                <h2>Technical Skills</h2>
+                <ul>
+                    <li>C Programming - Beginner</li>
+                    <li>HTML - Beginner</li>
+                    <li>CSS - Beginner</li>
+                    <li>Problem Solving - Learning</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Projects</h2>
+                <div class="project">
+                    <h3>My Personal Website</h3>
+                    <p>
+                        Creating a personal website using HTML
+                        and CSS to introduce myself, my interests,
+                        and my career goals.
+                    </p>
+                    <p><strong>Technologies:</strong> HTML, CSS</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Strengths</h2>
+                <ul>
+                    <li>Willingness to learn</li>
+                    <li>Hard work and dedication</li>
+                    <li>Adaptability</li>
+                    <li>Interest in technology</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Career Interests</h2>
+                <p>
+                    Software Engineering, Web Development,
+                    and Computer Science.
+                </p>
+            </section>
+
+            <section>
+                <h2>Hobbies</h2>
+                <p>Add your hobbies here.</p>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>Thank you for visiting my digital resume!</p>
+        </footer>
+
+    </div>
+
+    <button class="print-btn" onclick="window.print()">
+        Print / Save as PDF
+    </button>
+
+</body>
+</html>
