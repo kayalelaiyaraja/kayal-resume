@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>My Digital Resume</title>
 
     <style>
@@ -13,105 +14,232 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background: #eef2f7;
-            color: #333;
-            line-height: 1.6;
-            padding: 25px 12px;
+            background: #f0f4f8;
+            color: #263238;
+            line-height: 1.7;
         }
 
-        .resume {
-            max-width: 850px;
-            margin: auto;
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 18px #00000018;
-        }
-
-        header {
-            background: #15345b;
+        /* Navigation */
+        nav {
+            background: #102a43;
             color: white;
-            text-align: center;
-            padding: 35px 20px;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
         }
 
-        header h1 {
-            font-size: 32px;
-            margin-bottom: 8px;
+        nav h2 {
+            font-size: 22px;
         }
 
-        header p {
-            color: #d8e7ff;
-        }
-
-        .contact {
-            margin-top: 15px;
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
             font-size: 14px;
         }
 
-        main {
-            padding: 30px;
+        nav a:hover {
+            color: #61dafb;
         }
 
-        section {
-            margin-bottom: 25px;
+        /* Hero section */
+        .hero {
+            background: linear-gradient(135deg, #102a43, #176b87);
+            color: white;
+            text-align: center;
+            padding: 65px 20px;
         }
 
-        h2 {
-            color: #15345b;
-            border-bottom: 2px solid #2d80c3;
-            padding-bottom: 6px;
-            margin-bottom: 12px;
+        .profile-circle {
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 20px;
+            border: 3px solid white;
+            border-radius: 50%;
+            background: #d9eaf7;
+            color: #102a43;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 42px;
+            font-weight: bold;
         }
 
-        ul {
-            padding-left: 22px;
+        .hero h1 {
+            font-size: clamp(30px, 5vw, 44px);
+            margin-bottom: 10px;
         }
 
-        .project {
-            background: #f3f7fc;
-            padding: 15px;
-            border-radius: 8px;
+        .hero p {
+            color: #e0f2fe;
+        }
+
+        .hero .tagline {
             margin-top: 10px;
         }
 
-        .project h3 {
-            color: #245d91;
-        }
-
-        footer {
-            text-align: center;
-            background: #15345b;
-            color: white;
-            padding: 15px;
-        }
-
-        .print-btn {
-            display: block;
-            margin: 20px auto;
-            padding: 12px 24px;
+        .btn {
+            display: inline-block;
+            margin: 20px 6px 0;
+            padding: 11px 22px;
             border: none;
             border-radius: 6px;
-            background: #2478b9;
-            color: white;
-            font-size: 16px;
+            background: #38bdf8;
+            color: #102a43;
+            text-decoration: none;
+            font-weight: bold;
             cursor: pointer;
+            transition: 0.3s;
         }
 
+        .btn:hover {
+            background: white;
+            transform: translateY(-2px);
+        }
+
+        /* Main content */
+        .container {
+            width: 90%;
+            max-width: 950px;
+            margin: 35px auto;
+        }
+
+        .section {
+            background: white;
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #102a4310;
+            scroll-margin-top: 20px;
+        }
+
+        .section h2 {
+            color: #176b87;
+            border-bottom: 2px solid #38bdf8;
+            padding-bottom: 8px;
+            margin-bottom: 18px;
+        }
+
+        .section p {
+            margin-bottom: 8px;
+        }
+
+        /* Skills */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: #e0f2fe;
+            color: #075985;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        /* Project cards */
+        .project-card {
+            background: #f1f7fb;
+            padding: 18px;
+            border-left: 4px solid #176b87;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .project-card h3 {
+            margin-bottom: 7px;
+        }
+
+        .project-card p {
+            margin-bottom: 6px;
+        }
+
+        .contact-link {
+            color: #087eaa;
+            text-decoration: none;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #102a43;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 600px) {
+            nav {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav a {
+                margin: 0 7px;
+            }
+
+            .hero {
+                padding: 45px 15px;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            .container {
+                width: 94%;
+            }
+        }
+
+        /* Print resume or save as PDF */
         @media print {
             body {
                 background: white;
-                padding: 0;
             }
 
-            .resume {
-                box-shadow: none;
-            }
-
-            .print-btn {
+            nav, .btn, footer {
                 display: none;
+            }
+
+            .hero {
+                background: white;
+                color: #102a43;
+                padding: 25px;
+            }
+
+            .hero p {
+                color: #263238;
+            }
+
+            .section {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                break-inside: avoid;
+            }
+
+            .container {
+                width: 100%;
+                margin: 10px auto;
             }
         }
     </style>
@@ -119,97 +247,212 @@
 
 <body>
 
-    <div class="resume">
+    <!-- Navigation -->
+    <nav>
+        <h2>My Portfolio</h2>
 
-        <header>
-            <h1>Your Name</h1>
-            <p>First-Year Information Technology Student</p>
+        <div>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
 
-            <div class="contact">
-                <p>Email: yourname@email.com</p>
-                <p>Phone: +91 XXXXXXXXXX</p>
-                <p>Location: Tamil Nadu, India</p>
-                <p>LinkedIn: Add your LinkedIn profile URL</p>
+    <!-- Hero section -->
+    <header class="hero">
+        <div class="profile-circle" id="profileInitials">YN</div>
+
+        <h1 id="userName">Your Name</h1>
+
+        <p>First-Year Information Technology Student</p>
+
+        <p class="tagline">
+            Aspiring Software Engineer | Future Tech Professional
+        </p>
+
+        <a href="#contact" class="btn">Contact Me</a>
+
+        <button class="btn" onclick="downloadResume()">
+            Print / Save as PDF
+        </button>
+    </header>
+
+    <main class="container">
+
+        <!-- About -->
+        <section class="section" id="about">
+            <h2>About Me</h2>
+
+            <p>
+                Hello! I am a first-year Information Technology student
+                passionate about programming, technology, and web development.
+                I enjoy learning new skills and solving problems through code.
+            </p>
+
+            <p>
+                My goal is to become a skilled software engineer, build
+                useful projects, and contribute to innovative technology.
+            </p>
+        </section>
+
+        <!-- Education -->
+        <section class="section" id="education">
+            <h2>Education</h2>
+
+            <h3>Bachelor's Degree in Information Technology</h3>
+
+            <p><strong>College:</strong> Nehru Institute of Technology</p>
+
+            <p><strong>Year:</strong> First Year</p>
+
+            <p><strong>Status:</strong> Currently Studying</p>
+        </section>
+
+        <!-- Skills -->
+        <section class="section" id="skills">
+            <h2>Technical Skills</h2>
+
+            <div class="skills">
+                <span class="skill">C Programming</span>
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">JavaScript - Learning</span>
+                <span class="skill">Git & GitHub - Learning</span>
+                <span class="skill">Problem Solving</span>
             </div>
-        </header>
+        </section>
 
-        <main>
+        <!-- Projects -->
+        <section class="section" id="projects">
+            <h2>My Projects</h2>
 
-            <section>
-                <h2>Career Objective</h2>
+            <div class="project-card">
+                <h3>1. Digital Resume Website</h3>
+
                 <p>
-                    Motivated first-year IT student interested in
-                    software development and emerging technologies.
-                    Eager to learn programming, develop technical
-                    skills, and build practical projects to become
-                    a skilled software engineer.
+                    A personal portfolio website to present my education,
+                    skills, projects, and career goals.
                 </p>
-            </section>
 
-            <section>
-                <h2>Education</h2>
-                <h3>Bachelor of Technology / Engineering in IT</h3>
-                <p>Nehru Institute of Technology</p>
-                <p>Currently pursuing First Year</p>
-            </section>
+                <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+            </div>
 
-            <section>
-                <h2>Technical Skills</h2>
-                <ul>
-                    <li>C Programming - Beginner</li>
-                    <li>HTML - Beginner</li>
-                    <li>CSS - Beginner</li>
-                    <li>Problem Solving - Learning</li>
-                </ul>
-            </section>
+            <div class="project-card">
+                <h3>2. C Programming Practice</h3>
 
-            <section>
-                <h2>Projects</h2>
-                <div class="project">
-                    <h3>My Personal Website</h3>
-                    <p>
-                        Creating a personal website using HTML
-                        and CSS to introduce myself, my interests,
-                        and my career goals.
-                    </p>
-                    <p><strong>Technologies:</strong> HTML, CSS</p>
-                </div>
-            </section>
-
-            <section>
-                <h2>Strengths</h2>
-                <ul>
-                    <li>Willingness to learn</li>
-                    <li>Hard work and dedication</li>
-                    <li>Adaptability</li>
-                    <li>Interest in technology</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Career Interests</h2>
                 <p>
-                    Software Engineering, Web Development,
-                    and Computer Science.
+                    Beginner programs created to practise variables,
+                    data types, operators, and decision-making statements.
                 </p>
-            </section>
 
-            <section>
-                <h2>Hobbies</h2>
-                <p>Add your hobbies here.</p>
-            </section>
+                <p><strong>Technology:</strong> C Programming</p>
+            </div>
+        </section>
 
-        </main>
+        <!-- Career goals -->
+        <section class="section" id="goals">
+            <h2>Career Objective</h2>
 
-        <footer>
-            <p>Thank you for visiting my digital resume!</p>
-        </footer>
+            <p>
+                To strengthen my programming and software development
+                skills, gain practical experience, and build a successful
+                career in the IT industry.
+            </p>
+        </section>
 
-    </div>
+        <!-- Strengths -->
+        <section class="section" id="strengths">
+            <h2>Strengths & Interests</h2>
 
-    <button class="print-btn" onclick="window.print()">
-        Print / Save as PDF
-    </button>
+            <ul style="padding-left: 22px;">
+                <li>Quick learner</li>
+                <li>Self-motivated</li>
+                <li>Interested in new technologies</li>
+                <li>Committed to continuous learning</li>
+            </ul>
+        </section>
+
+        <!-- Contact -->
+        <section class="section" id="contact">
+            <h2>Contact Me</h2>
+
+            <p>
+                <strong>Email:</strong>
+                <a class="contact-link" id="emailLink"
+                   href="mailto:yourname@example.com">
+                    yourname@example.com
+                </a>
+            </p>
+
+            <p>
+                <strong>Location:</strong> Tamil Nadu, India
+            </p>
+
+            <p>
+                <strong>GitHub:</strong>
+                <a class="contact-link"
+                   href="https://github.com/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Visit GitHub
+                </a>
+            </p>
+
+            <p>
+                <strong>LinkedIn:</strong>
+                Add your LinkedIn profile link
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="year"></span> Your Name |
+            Built with HTML, CSS & JavaScript
+        </p>
+    </footer>
+
+    <script>
+        // Automatically update the footer year
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+        // Update these details with your own information
+        const profile = {
+            name: "Your Name",
+            email: "yourname@example.com"
+        };
+
+        // Display the name on the website
+        document.getElementById("userName").textContent =
+            profile.name;
+
+        // Generate initials for the profile circle
+        const initials = profile.name
+            .trim()
+            .split(/\s+/)
+            .map(word => word.charAt(0))
+            .join("")
+            .substring(0, 2)
+            .toUpperCase();
+
+        document.getElementById("profileInitials").textContent =
+            initials || "YN";
+
+        // Update email link and displayed email
+        const emailLink = document.getElementById("emailLink");
+
+        emailLink.textContent = profile.email;
+        emailLink.href = "mailto:" + profile.email;
+
+        // Open the browser print dialog
+        function downloadResume() {
+            window.print();
+        }
+    </script>
 
 </body>
 </html>
